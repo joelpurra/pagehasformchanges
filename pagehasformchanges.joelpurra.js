@@ -6,7 +6,7 @@
 * A jQuery plugin to check if *anything* has changed in *any form* on a page,
 * and warn the user before leaving the page.
 */
-// https://gist.github.com/
+// https://gist.github.com/2579139
 
 // Any form elements that trigger a .change() jQuery event will also trigger
 // showing the warning, when the user tries to navigate away from the page.
