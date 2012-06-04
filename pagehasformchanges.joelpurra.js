@@ -6,7 +6,7 @@
 * A jQuery plugin to check if *anything* has changed in *any form* on a page,
 * and warn the user before leaving the page.
 */
-// https://gist.github.com/2579139
+// https://gist.github.com/
 
 // Any form elements that trigger a .change() jQuery event will also trigger
 // showing the warning, when the user tries to navigate away from the page.
@@ -19,7 +19,10 @@
 // there will be no warning shown for the other forms.
 
 // Options: JoelPurra.PageHasFormChanges.setOptions({ /* … */ });
-//    leavingPageWarningMessage: "y u no save changes?"
+//    leavingPageWarningMessage: "y u no save changes?".
+//    resetWarningOnPreventedSubmit: default false. Don't reset if for example
+//        form validation wasn't successful. Change to true if you prevent the
+//        default browser form submit and use ajax instead.
 
 // Uses Ben Alman's JavaScript Debug: A simple wrapper for console.log
 // http://benalman.com/projects/javascript-debug-console-log/
@@ -35,7 +38,8 @@ var JoelPurra = JoelPurra || {};
    namespace.PageHasFormChanges = {};
 
     var defaultOptions = {
-        leavingPageWarningMessage: "Changes have been detected in the form. Leaving the page will discard all form input."
+        leavingPageWarningMessage: "Changes have been detected in the form. Leaving the page will discard all form input.",
+        resetWarningOnPreventedSubmit: false
     }
 
     var options = $.extend(true, {}, defaultOptions);
@@ -59,6 +63,16 @@ var JoelPurra = JoelPurra || {};
     $(document).submit(function (e)
     {
         debug.log(tag, "$(document).submit() detected", e);
+
+        if(e.isDefaultPrevented())
+        {
+            debug.log(tag, "$(document).submit() event was already prevented from actually submitting the form.", e);
+
+            if(options.resetWarningOnPreventedSubmit !== true)
+            {
+                return;
+            }
+        }
 
         if (userHasChangedSomething === true)
         {
