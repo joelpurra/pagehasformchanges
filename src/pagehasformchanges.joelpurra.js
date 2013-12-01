@@ -1,31 +1,13 @@
 /*!
 * @license PageHasFormChanges
-* Copyright © 2012 Joel Purra <http://joelpurra.se/>
+* Copyright © 2012, 2013 Joel Purra <http://joelpurra.com/>
 * Released under MIT, BSD and GPL license. Comply with at least one.
+*
+* https://github.com/joelpurra/pagehasformchanges
 *
 * A jQuery plugin to check if *anything* has changed in *any form* on a page,
 * and warn the user before leaving the page.
 */
-// https://gist.github.com/2579139
-
-// Any form elements that trigger a .change() jQuery event will also trigger
-// showing the warning, when the user tries to navigate away from the page.
-// Navigation in this case includes clicking a link, the browser's back button,
-// reloading the page etcetera. It does not include submitting any of the forms,
-// as submitting the form is assumed to save the changes the user has made.
-
-// Not covered: This simple plugin does not distinguish between multiple forms
-// on a page. If the user changes fields in multiple forms and then submits one,
-// there will be no warning shown for the other forms.
-
-// Options: JoelPurra.PageHasFormChanges.setOptions({ /* … */ });
-//    leavingPageWarningMessage: "y u no save changes?".
-//    resetWarningOnPreventedSubmit: default false. Don't reset if for example
-//        form validation wasn't successful. Change to true if you prevent the
-//        default browser form submit and use ajax instead.
-
-// Uses Ben Alman's JavaScript Debug: A simple wrapper for console.log
-// http://benalman.com/projects/javascript-debug-console-log/
 
 /*jslint vars: true, white: true, browser: true*/
 /*global jQuery*/
