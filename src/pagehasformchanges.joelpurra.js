@@ -1,6 +1,6 @@
 /*!
  * @license PageHasFormChanges
- * Copyright © 2012, 2013 Joel Purra <http://joelpurra.com/>
+ * Copyright © 2012, 2013 Joel Purra <https://joelpurra.com/>
  * Released under MIT, BSD and GPL license. Comply with at least one.
  *
  * https://github.com/joelpurra/pagehasformchanges
@@ -62,7 +62,7 @@ var JoelPurra = JoelPurra || {};
     });
 
     function initializeOnBeforeUnloadListener() {
-        // From http://jonathonhill.net/2011-03-04/catching-the-javascript-beforeunload-event-the-cross-browser-way/
+        // From https://compwright.com/2011-03-04/catching-the-javascript-beforeunload-event-the-cross-browser-way/
         window.onbeforeunload = function(e) {
             if (userHasChangedSomething !== true) {
                 return null;

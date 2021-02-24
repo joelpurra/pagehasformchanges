@@ -6,7 +6,7 @@ A jQuery plugin to check if *anything* has changed in *any form* on a page, and 
 
 ## Description
 
-Any form elements that trigger a [`.change()` jQuery event](http://api.jquery.com/change/) will also trigger showing the warning, when the user tries to navigate away from the page. Navigation in this case includes clicking a link, the browser's back button, reloading the page etcetera, using the [`window.onbeforeunload`](https://developer.mozilla.org/en-US/docs/Web/API/Window.onbeforeunload) event. It does not include submitting any of the forms, as submitting the form is assumed to save the changes the user has made.
+Any form elements that trigger a [`.change()` jQuery event](https://api.jquery.com/change/) will also trigger showing the warning, when the user tries to navigate away from the page. Navigation in this case includes clicking a link, the browser's back button, reloading the page etcetera, using the [`window.onbeforeunload`](https://developer.mozilla.org/en-US/docs/Web/API/Window.onbeforeunload) event. It does not include submitting any of the forms, as submitting the form is assumed to save the changes the user has made.
 
 
 
@@ -40,13 +40,13 @@ JoelPurra.PageHasFormChanges.setOptions({
 
 
 ## Runtime dependencies
-- [jQuery](http://jquery.com/)
+- [jQuery](https://jquery.com/)
 - [Ben Alman's JavaScript Debug](http://benalman.com/projects/javascript-debug-console-log/), a simple wrapper for console.log
 
 
 
 ## License
-Copyright (c) 2012, 2013, 2014, 2015 Joel Purra <http://joelpurra.com/>
+Copyright (c) 2012, 2013, 2014, 2015 Joel Purra <https://joelpurra.com/>
 All rights reserved.
 
 When using PageHasFormChanges, comply to at least one of the three available licenses: BSD, MIT, GPL. Please see the `LICENSE` file for details.
