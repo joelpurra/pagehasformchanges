@@ -4,6 +4,12 @@ A jQuery plugin to check if *anything* has changed in *any form* on a page, and 
 
 
 
+> ## ⚠️ This project has been archived
+>
+> No future updates are planned. Feel free to continue using it, but expect no support.
+
+
+
 ## Description
 
 Any form elements that trigger a [`.change()` jQuery event](https://api.jquery.com/change/) will also trigger showing the warning, when the user tries to navigate away from the page. Navigation in this case includes clicking a link, the browser's back button, reloading the page etcetera, using the [`window.onbeforeunload`](https://developer.mozilla.org/en-US/docs/Web/API/Window.onbeforeunload) event. It does not include submitting any of the forms, as submitting the form is assumed to save the changes the user has made.
